@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <title>Job board</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">CAREER EXPLORER</p>
+        <h1>Find your next opportunity.</h1>
+        <p class="subtitle">Explore roles, keep the ones you like, and come back when you're ready.</p>
+        <label class="search-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search by title, company or place" autocomplete="off" />
+        </label>
+      </header>
+
+      <section class="section" aria-labelledby="jobs-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">EXPLORE</p>
+            <h2 id="jobs-heading">Open opportunities</h2>
+          </div>
+          <span class="count" id="job-count">0 jobs</span>
+        </div>
+        <ul id="jobs" class="job-list" aria-live="polite"></ul>
+        <p id="empty-jobs" class="empty hidden">No jobs match your search. Try another keyword.</p>
+      </section>
+
+      <section class="section saved-section" aria-labelledby="saved-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR SHORTLIST</p>
+            <h2 id="saved-heading">Saved jobs <span id="saved-count" class="saved-number">0</span></h2>
+          </div>
+          <span class="saved-hint">Ready when you are</span>
+        </div>
+        <ul id="saved-jobs" class="job-list" aria-live="polite"></ul>
+        <p id="empty-saved" class="empty">No saved jobs yet. Tap “Save job” on a role you'd like to revisit.</p>
+      </section>
+      <footer>Small steps lead to great work.</footer>
+      <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
